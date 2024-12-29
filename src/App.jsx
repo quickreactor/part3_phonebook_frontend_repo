@@ -143,6 +143,12 @@ const App = () => {
             setTimeout(() => {
                 setMessage(null);
             }, 5000);
+        }).catch(err => {
+            console.log(err);
+            setMessage(err.response.data.error);
+            setTimeout(() => {
+                setMessage(null);
+            }, 5000);
         });
 
         setNewName("");
